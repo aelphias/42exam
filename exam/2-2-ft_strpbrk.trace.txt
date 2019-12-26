@@ -1,0 +1,81 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+ox-j6.21-school.ru
+Darwin 16.7.0 x86_64
+$> date
+Thu Dec 19 13:09:43 MSK 2019
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/exam_20191219/aelphias
+
+= Git history ==================================================================
+$> git -C /var/folders/92/8b7gwmf519753wmpdw3qwyww0000gq/T/tmpp_3E0Y/user log --pretty='%H - %an, %ad : %s'
+c8132ad520d111230cfc40798edd836345e4d9e6 - Exam 42, Thu Dec 19 13:09:33 2019 +0300 : ok
+bf9da67e29ee842e23aa320465f534e9eaa9245f - Exam 42, Thu Dec 19 12:21:04 2019 +0300 : nah
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/92/8b7gwmf519753wmpdw3qwyww0000gq/T/tmpp_3E0Y/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  440 Dec 19 13:09 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Dec 19 13:09 ft_strpbrk
+drwxr-xr-x  3 deepthought  deepthought  102 Dec 19 13:09 wdmatch
+
+/var/folders/92/8b7gwmf519753wmpdw3qwyww0000gq/T/tmpp_3E0Y/user/ft_strpbrk:
+total 8
+-rw-r--r--  1 deepthought  deepthought  294 Dec 19 13:09 ft_strpbrk.c
+
+/var/folders/92/8b7gwmf519753wmpdw3qwyww0000gq/T/tmpp_3E0Y/user/wdmatch:
+total 8
+-rw-r--r--  1 deepthought  deepthought  210 Dec 19 13:09 wdmatch.c
+ 
+= ft_strpbrk ===================================================================
+$> gcc -Wextra -Wall -Werror main.c ft_strpbrk.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./exg7bb0fpy5dv7w8w0hbc04j 'chat' 'chien'
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./pe8ae2qs8qq0alj8p2dydbaj 'ABCDEFG019874' 'ABCD'
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./a2dqskfbmsm5dkuouwc4v2s7 ' ' '1234567890'
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./l6clijypwowih22uj00c4iu6 '1234567890' ' '
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./ghjpi7f2a9kozdaw3vs7fl6k ';fjhbsdnc xwpusgrhbs' 'opsiyhgvdzbnciox'
+$> diff -U 3 user_output_test5 test5.output | cat -e
+--- user_output_test5	2019-12-19 13:09:47.000000000 +0300$
++++ test5.output	2019-12-19 13:09:47.000000000 +0300$
+@@ -1,3 +1,3 @@$
+ Expected result : hbsdnc xwpusgrhbs$
+-Your result : pusgrhbs$
+-Failure$
++Your result : hbsdnc xwpusgrhbs$
++Success$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================
